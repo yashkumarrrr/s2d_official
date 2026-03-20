@@ -19,7 +19,9 @@ interface Convo {
 }
 interface Server {
   id: string; name: string; host: string; status: string
-  cpuUsage: number | null; ramUsage: number | null; diskUsage: number | null; os: string | null
+  cpuUsage: number | null; ramUsage: number | null
+  diskUsage: number | null; os: string | null
+  lastCheckAt: string | null
 }
 interface UserInfo { id: string; name: string; email: string; plan: string }
 
