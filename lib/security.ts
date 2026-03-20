@@ -101,9 +101,9 @@ export function checkIPRateLimit(
 if (typeof setInterval !== 'undefined') {
   setInterval(() => {
     const now = Date.now()
-    for (const [k, v] of ipStore.entries()) {
+    ipStore.forEach((v, k) => {
       if (now > v.resetAt) ipStore.delete(k)
-    }
+    })
   }, 300000)
 }
 
